@@ -1,5 +1,5 @@
 
-import { Curtain, Ironing, Washing, Car, Home, Check } from "lucide-react";
+import { Sparkles, Shirt, Home, Car, Check, WashingMachine } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -9,12 +9,12 @@ const Services = () => {
       description: "Professional dry cleaning for delicate fabrics, suits, and formal wear using eco-friendly solvents."
     },
     {
-      icon: <Washing className="w-12 h-12 text-blue-600" />,
+      icon: <WashingMachine className="w-12 h-12 text-blue-600" />,
       title: "Washing & Folding",
       description: "Complete wash, dry, and fold service for everyday clothing with premium detergents."
     },
     {
-      icon: <Ironing className="w-12 h-12 text-blue-600" />,
+      icon: <Shirt className="w-12 h-12 text-blue-600" />,
       title: "Ironing Service",
       description: "Expert pressing and ironing to keep your clothes crisp and wrinkle-free."
     },
@@ -24,7 +24,7 @@ const Services = () => {
       description: "Deep cleaning for carpets and rugs with specialized equipment and solutions."
     },
     {
-      icon: <Curtain className="w-12 h-12 text-blue-600" />,
+      icon: <Sparkles className="w-12 h-12 text-blue-600" />,
       title: "Curtain Cleaning",
       description: "Professional cleaning and maintenance for all types of curtains and drapes."
     },

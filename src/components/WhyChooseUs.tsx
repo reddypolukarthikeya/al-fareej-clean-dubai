@@ -1,5 +1,5 @@
 
-import { Check, Clock, Curtain, Car, Ironing, Washing } from "lucide-react";
+import { Check, Clock, Sparkles, Car, Shirt, WashingMachine } from "lucide-react";
 
 const WhyChooseUs = () => {
   const benefits = [
@@ -19,12 +19,12 @@ const WhyChooseUs = () => {
       description: "24-48 hour service for most items"
     },
     {
-      icon: <Ironing className="w-8 h-8 text-blue-600" />,
+      icon: <Shirt className="w-8 h-8 text-blue-600" />,
       title: "Eco-Friendly Options",
       description: "Environmentally conscious cleaning solutions"
     },
     {
-      icon: <Washing className="w-8 h-8 text-blue-600" />,
+      icon: <WashingMachine className="w-8 h-8 text-blue-600" />,
       title: "Experienced Professionals",
       description: "Skilled team with years of expertise"
     },
