@@ -27,6 +27,9 @@ const AdminLogin = () => {
           <CardTitle className="text-2xl font-bold text-blue-900">
             Al Fareej Laundry
           </CardTitle>
+          <p className="text-lg text-blue-700 font-semibold" dir="rtl">
+            مصبغه الفريج
+          </p>
           <CardDescription>Admin Dashboard Login</CardDescription>
         </CardHeader>
         <CardContent>

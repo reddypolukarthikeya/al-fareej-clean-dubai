@@ -29,9 +29,12 @@ const AdminDashboard = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <h1 className="text-xl font-bold text-blue-900">
-              Al Fareej Laundry Admin Dashboard
-            </h1>
+            <div>
+              <h1 className="text-xl font-bold text-blue-900">
+                Al Fareej Laundry Admin Dashboard
+              </h1>
+              <p className="text-sm text-blue-700" dir="rtl">مصبغه الفريج</p>
+            </div>
             <Button 
               variant="outline" 
               onClick={handleLogout}
