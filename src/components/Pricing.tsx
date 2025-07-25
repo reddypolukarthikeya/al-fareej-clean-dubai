@@ -1,12 +1,15 @@
 
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Pricing = () => {
+  const { t } = useLanguage();
+
   const plans = [
     {
-      name: "Basic Plan",
-      nameArabic: "الخطة الأساسية",
+      nameKey: "basicPlan",
       price: "99",
       period: "per month",
       description: "Perfect for individuals and small households",
@@ -20,8 +23,7 @@ const Pricing = () => {
       popular: false
     },
     {
-      name: "Family Plan",
-      nameArabic: "خطة العائلة",
+      nameKey: "familyPlan",
       price: "179",
       period: "per month",
       description: "Ideal for families and larger households",
@@ -36,8 +38,7 @@ const Pricing = () => {
       popular: true
     },
     {
-      name: "Premium Plan",
-      nameArabic: "الخطة المميزة",
+      nameKey: "premiumPlan",
       price: "279",
       period: "per month",
       description: "Complete laundry solution for busy professionals",
@@ -59,37 +60,31 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-            Pricing Plans
+            {t('pricingPlans')}
           </h2>
-          <p className="text-2xl text-blue-700 font-semibold mb-4" dir="rtl">
-            خطط الأسعار
-          </p>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Flexible pricing options to suit your laundry needs
+            {t('pricingDescription')}
           </p>
           <p className="text-lg text-gray-600 mt-4">
-            Individual services starting from <span className="font-bold text-blue-600">15 AED</span>
+            {t('individualServices')} <span className="font-bold text-blue-600">15 AED</span>
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <div key={index} className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 relative ${plan.popular ? 'border-2 border-blue-500 scale-105' : 'border border-gray-200'}`}>
+            <div key={index} className={`flex flex-col h-full bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 relative ${plan.popular ? 'border-2 border-blue-500 scale-105' : 'border border-gray-200'}`}>
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Most Popular
+                    {t('mostPopular')}
                   </span>
                 </div>
               )}
               
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-blue-900 mb-2">
-                  {plan.name}
+                  {t(plan.nameKey)}
                 </h3>
-                <p className="text-lg text-blue-600 font-medium mb-2" dir="rtl">
-                  {plan.nameArabic}
-                </p>
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   {plan.price} <span className="text-lg text-gray-600">AED</span>
                 </div>
@@ -97,7 +92,7 @@ const Pricing = () => {
                 <p className="text-sm text-gray-600 mt-2">{plan.description}</p>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -106,15 +101,17 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <Button 
-                className={`w-full py-3 rounded-full font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl' 
-                    : 'bg-blue-100 hover:bg-blue-200 text-blue-600'
-                }`}
-              >
-                Choose Plan
-              </Button>
+              <Link to="/booking" className="mt-auto">
+                <Button 
+                  className={`w-full py-3 rounded-full font-semibold transition-all duration-300 ${
+                    plan.popular 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl' 
+                      : 'bg-blue-100 hover:bg-blue-200 text-blue-600'
+                  }`}
+                >
+                  {t('choosePlan')}
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
