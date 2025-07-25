@@ -60,7 +60,7 @@ const Hero = () => {
             </p>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
               Professional dry cleaning and laundry services with free pickup and delivery. 
-              Experience premium care for your garments with Al Fareej Laundry.
+              Experience premium care for your garments with Al Fareej Laundry - مصبغه الفريج.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -79,12 +79,12 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Professional Service Image */}
+          {/* Professional Laundry Service Image */}
           <div className="relative">
             <div className="bg-blue-100 rounded-3xl p-8 shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Professional laundry service - Al Fareej Laundry Dubai"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Professional laundry service - Al Fareej Laundry Dubai - مصبغه الفريج"
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
