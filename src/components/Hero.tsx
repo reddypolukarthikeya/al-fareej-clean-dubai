@@ -16,62 +16,82 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <header className="flex justify-between items-center mb-16">
-          <div className="text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">
+        {/* Header - Fixed alignment */}
+        <header className="flex justify-between items-start mb-16">
+          <div className="flex-1">
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-2 leading-tight">
               AL FAREEJ LAUNDRY
             </h1>
-            <p className="text-2xl md:text-3xl text-blue-700 font-semibold" dir="rtl">
+            <p className="text-2xl md:text-3xl text-blue-700 font-semibold mb-2" dir="rtl">
               مصبغه الفريج
             </p>
-            <p className="text-sm text-blue-600 mt-2">Serving Dubai</p>
+            <p className="text-sm text-blue-600">Serving Dubai</p>
           </div>
-          <div className="text-right">
+          <div className="flex-1 text-right">
             <a 
               href="tel:+971502193235" 
-              className="flex items-center gap-2 text-blue-900 hover:text-blue-700 transition-colors mb-2"
+              className="flex items-center justify-end gap-2 text-blue-900 hover:text-blue-700 transition-colors mb-2"
             >
-              <Phone size={20} />
               <span className="font-semibold">+971 50 219 3235</span>
+              <Phone size={20} />
             </a>
             <a 
               href="mailto:alfareej.laundry@hotmail.com" 
-              className="text-blue-600 hover:text-blue-500 transition-colors text-sm"
+              className="text-blue-600 hover:text-blue-500 transition-colors text-sm block"
             >
               alfareej.laundry@hotmail.com
             </a>
           </div>
         </header>
 
-        {/* Hero Content */}
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-bold text-blue-900 mb-6 leading-tight">
-            Your Clothes,
-            <br />
-            <span className="text-blue-600">Our Care</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-            Effortless Laundry in Dubai
-          </p>
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Professional dry cleaning and laundry services with free pickup and delivery. 
-            Experience premium care for your garments with Al Fareej Laundry.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/booking">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <Calendar className="mr-2" size={20} />
-                Schedule Pickup Now
-              </Button>
-            </Link>
-            <a href="tel:+971502193235">
-              <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                <Phone className="mr-2" size={20} />
-                Call Now
-              </Button>
-            </a>
+        {/* Hero Content with Image */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <h2 className="text-5xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
+              Your Clothes,
+              <br />
+              <span className="text-blue-600">Our Care</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-700 mb-4 leading-relaxed">
+              Effortless Laundry in Dubai
+            </p>
+            <p className="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed" dir="rtl">
+              خدمة غسيل سهلة في دبي
+            </p>
+            <p className="text-lg text-gray-600 mb-8 max-w-lg">
+              Professional dry cleaning and laundry services with free pickup and delivery. 
+              Experience premium care for your garments with Al Fareej Laundry.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Link to="/booking">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <Calendar className="mr-2" size={20} />
+                  Schedule Pickup Now
+                </Button>
+              </Link>
+              <a href="tel:+971502193235">
+                <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Phone className="mr-2" size={20} />
+                  Call Now
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Professional Service Image */}
+          <div className="relative">
+            <div className="bg-blue-100 rounded-3xl p-8 shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Professional laundry service - Al Fareej Laundry Dubai"
+                className="w-full h-96 object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+                <p className="text-blue-900 font-bold text-lg">24-48 Hour</p>
+                <p className="text-blue-600 text-sm">Fast Turnaround</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

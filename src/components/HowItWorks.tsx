@@ -6,21 +6,25 @@ const HowItWorks = () => {
     {
       icon: <Calendar className="w-12 h-12" />,
       title: "Schedule Pickup",
+      titleArabic: "حدد موعد الاستلام",
       description: "Book online or call us to schedule a convenient pickup time"
     },
     {
       icon: <Car className="w-12 h-12" />,
       title: "We Collect & Clean",
+      titleArabic: "نستلم وننظف",
       description: "Our team picks up your items and provides professional cleaning"
     },
     {
       icon: <Check className="w-12 h-12" />,
       title: "Quality Check",
+      titleArabic: "فحص الجودة",
       description: "Every item is inspected to ensure the highest quality standards"
     },
     {
       icon: <Home className="w-12 h-12" />,
       title: "We Deliver Fresh",
+      titleArabic: "نسلم نظيفاً",
       description: "Your clothes are delivered back clean, fresh, and perfectly folded"
     }
   ];
@@ -32,6 +36,9 @@ const HowItWorks = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
             How It Works
           </h2>
+          <p className="text-2xl text-blue-700 font-semibold mb-4" dir="rtl">
+            كيف يعمل
+          </p>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Simple, convenient, and reliable laundry service in 4 easy steps
           </p>
@@ -48,9 +55,12 @@ const HowItWorks = () => {
                   {index + 1}
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-blue-900 mb-3">
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
                 {step.title}
               </h3>
+              <p className="text-lg text-blue-600 font-medium mb-3" dir="rtl">
+                {step.titleArabic}
+              </p>
               <p className="text-gray-600">
                 {step.description}
               </p>

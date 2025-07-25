@@ -6,6 +6,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "Basic Plan",
+      nameArabic: "الخطة الأساسية",
       price: "99",
       period: "per month",
       description: "Perfect for individuals and small households",
@@ -20,6 +21,7 @@ const Pricing = () => {
     },
     {
       name: "Family Plan",
+      nameArabic: "خطة العائلة",
       price: "179",
       period: "per month",
       description: "Ideal for families and larger households",
@@ -35,6 +37,7 @@ const Pricing = () => {
     },
     {
       name: "Premium Plan",
+      nameArabic: "الخطة المميزة",
       price: "279",
       period: "per month",
       description: "Complete laundry solution for busy professionals",
@@ -58,6 +61,9 @@ const Pricing = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
             Pricing Plans
           </h2>
+          <p className="text-2xl text-blue-700 font-semibold mb-4" dir="rtl">
+            خطط الأسعار
+          </p>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Flexible pricing options to suit your laundry needs
           </p>
@@ -81,6 +87,9 @@ const Pricing = () => {
                 <h3 className="text-2xl font-bold text-blue-900 mb-2">
                   {plan.name}
                 </h3>
+                <p className="text-lg text-blue-600 font-medium mb-2" dir="rtl">
+                  {plan.nameArabic}
+                </p>
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   {plan.price} <span className="text-lg text-gray-600">AED</span>
                 </div>
